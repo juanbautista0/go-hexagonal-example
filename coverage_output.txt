@@ -1,0 +1,41 @@
+ok  	aws_challenge_pragma	(cached)	coverage: 50.0% of statements
+ok  	aws_challenge_pragma/domain/models	(cached)	coverage: 100.0% of statements
+?   	aws_challenge_pragma/domain/repositories	[no test files]
+ok  	aws_challenge_pragma/domain/usecases	(cached)	coverage: 100.0% of statements
+ok  	aws_challenge_pragma/handlers	0.847s	coverage: 92.9% of statements
+
+2025/03/14 20:28:16 [35mC:/Users/juan.bautistam_pragm/Documents/projects/aws_challenge_go_pragma/infrastructure/client/rds.mysql.client.go:47
+[0m[31m[error] [0mfailed to initialize database, got error dial tcp :0: connectex: The requested address is not valid in its context.
+Error al conectar con la base de datos: dial tcp :0: connectex: The requested address is not valid in its context.
+--- FAIL: TestNewRdsMySQLGormClient_WithMockAuth (0.05s)
+    rds.mysql.client_test.go:41: 
+        	Error Trace:	C:/Users/juan.bautistam_pragm/Documents/projects/aws_challenge_go_pragma/infrastructure/client/rds.mysql.client_test.go:41
+        	Error:      	Received unexpected error:
+        	            	error al inicializar la conexión con la base de datos: dial tcp :0: connectex: The requested address is not valid in its context.
+        	Test:       	TestNewRdsMySQLGormClient_WithMockAuth
+panic: runtime error: invalid memory address or nil pointer dereference [recovered]
+	panic: runtime error: invalid memory address or nil pointer dereference
+[signal 0xc0000005 code=0x0 addr=0x18 pc=0x108dd8a]
+
+goroutine 7 [running]:
+testing.tRunner.func1.2({0x10d32e0, 0x143c7f0})
+	C:/Program Files/Go/src/testing/testing.go:1632 +0x225
+testing.tRunner.func1()
+	C:/Program Files/Go/src/testing/testing.go:1635 +0x359
+panic({0x10d32e0?, 0x143c7f0?})
+	C:/Program Files/Go/src/runtime/panic.go:785 +0x132
+aws_challenge_pragma/infrastructure/client_test.TestNewRdsMySQLGormClient_WithMockAuth(0xc000133d40)
+	C:/Users/juan.bautistam_pragm/Documents/projects/aws_challenge_go_pragma/infrastructure/client/rds.mysql.client_test.go:43 +0xaa
+testing.tRunner(0xc000133d40, 0x1173140)
+	C:/Program Files/Go/src/testing/testing.go:1690 +0xcb
+created by testing.(*T).Run in goroutine 1
+	C:/Program Files/Go/src/testing/testing.go:1743 +0x377
+FAIL	aws_challenge_pragma/infrastructure/client	0.123s
+ok  	aws_challenge_pragma/infrastructure/config	(cached)	coverage: 94.1% of statements
+ok  	aws_challenge_pragma/infrastructure/driven/repository/user	0.851s	coverage: 93.8% of statements
+ok  	aws_challenge_pragma/infrastructure/driving	(cached)	coverage: 100.0% of statements
+ok  	aws_challenge_pragma/infrastructure/error	(cached)	coverage: 100.0% of statements
+ok  	aws_challenge_pragma/infrastructure/logger	(cached)	coverage: 100.0% of statements
+ok  	aws_challenge_pragma/infrastructure/mocks	0.567s	coverage: 90.3% of statements
+ok  	aws_challenge_pragma/interfaces	(cached)	coverage: 100.0% of statements
+FAIL
